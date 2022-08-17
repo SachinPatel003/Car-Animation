@@ -1,0 +1,83 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    border: 2px solid red;
+    overflow: hidden;
+}
+.sky img{
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.mount img{
+    width: 300vw;
+    height: 71vh;
+    position: absolute;
+    animation: mount 20s linear infinite;
+}
+.road img{
+    /* margin-top: -vh; */
+    z-index: -1;
+    width: 300vw;
+    position: absolute;
+    height: 100vh;
+    animation: road 1.2s linear infinite;
+}
+.car img{
+    position: absolute;
+    z-index: +2;
+    height: 20vh;
+    margin-top: 75vh;
+    margin-left: 50vh;
+    animation: carmove 1s ease-in infinite
+}
+.wheel1 img{
+    position: absolute;
+    margin-top: 84.5vh;
+    margin-left: 43.7vw;
+    width: 4.8vw;
+    height: 4.8vw;
+    animation: Wheelrotate 0.3s linear infinite ;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+.wheel2 img{
+    position: absolute;
+    margin-top: 84.5vh;
+    margin-left: 24.9vw;
+    width: 4.8vw;
+    height: 4.8vw;
+    animation: Wheelrotate 0.3s linear infinite;
+}
+
+@keyframes Wheelrotate {
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes road {
+    100%{
+        transform: translatex(-100vw);
+    }
+}
+
+@keyframes carmove {
+    20%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    80%{
+        transform: translateY(1px);
+    }
+}
+@keyframes mount {
+    100%{
+        transform: translateX(-100vw);
+    }
+    
+}
